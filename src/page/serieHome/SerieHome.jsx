@@ -1,6 +1,7 @@
 import Header from "../../components/header/Header"
 import Tabla from "../../components/tabla/Tabla"
 import './serieHome.scss'
+import Footer from "../../components/footer/Footer"
 
 const SerieHome = () => {
   return (
@@ -17,6 +18,7 @@ const SerieHome = () => {
           title={'TV'}
         />
       </div>
+      <Footer/>
     </div>
   )
 }

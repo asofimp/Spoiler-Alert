@@ -1,5 +1,7 @@
 import Header from "../../components/header/Header"
 import Tabla from "../../components/tabla/Tabla"
+import Footer from "../../components/footer/Footer"
+
 import './movieHome.scss'
 
 const MovieHome = () => {
@@ -18,7 +20,7 @@ const MovieHome = () => {
           title={'Movie Trending'}
         />
       </div>
-
+      <Footer/>
     </div>
   )
 }
