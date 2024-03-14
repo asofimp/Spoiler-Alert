@@ -1,12 +1,19 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Movie from './components/movie/Movie'
+import Home from './page/Home'
 
 const App = () => {
 
   return (
 
     <div>
-      <Movie/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/'>
+            <Route index element={<Home/>}/>
+          </Route>
+        </Routes>      
+      </BrowserRouter>
     </div>
   )
 }

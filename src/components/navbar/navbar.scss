@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom,  #000000,#00000000,);
+    z-index: 1000;
+
+    .logo{
+        width: 100px;
+        height: 100px;
+        margin: 0 20px;
+    }
+
+    .links{
+        display: flex;
+
+        .link{
+            padding: 15px;
+            color: rgb(168, 197, 197);
+        }
+        
+    }
+}
