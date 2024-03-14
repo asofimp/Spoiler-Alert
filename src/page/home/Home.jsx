@@ -1,11 +1,14 @@
-import Header from "../components/header/Header"
-import Widget from "../components/widget/Widget"
+import Footer from "../../components/footer/Footer"
+import Header from "../../components/header/Header"
+import Widget from "../../components/widget/Widget"
 
 const Home = () => {
 
   return (
     <div>
-        <Header/>
+        <Header
+          url={'https://api.themoviedb.org/3/discover/movie?api_key=b419006516f8c011313942f7712b188b'}
+        />
         <div className="">
             <Widget
                 title={'Movie Trending'}
@@ -20,6 +23,7 @@ const Home = () => {
             />
 
         </div>
+        <Footer/>
     </div>
   )
 }

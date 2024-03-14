@@ -12,11 +12,11 @@ const Navbar = () => {
                 <div className="link">Home</div>
             </Link>
 
-            <Link to={'movie'} style={{textDecoration:'none'}}>
+            <Link to={'/movie'} style={{textDecoration:'none'}}>
                 <div className="link">Movie</div>
             </Link>
 
-            <Link to={'serie'} style={{textDecoration:'none'}}>
+            <Link to={'/serie'} style={{textDecoration:'none'}}>
                 <div className="link">Serie</div>
             </Link>
         </div>

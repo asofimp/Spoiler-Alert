@@ -26,18 +26,25 @@
     padding-left: var(--slide-spacing);
     max-width: 40rem;
     margin: 15px;
-}
-
-.embla__slide img{
-    height: 350px;
-    width: 250px;
-    aspect-ratio: 1/1;
-    object-fit:cover ;
-    margin: 15px;
     transition: transform 0.3s ease;
     &:hover{
         transform: scale(1.2);
     }
+}
+
+.embla__slide {
+    img{
+        height: 350px;
+        width: 250px;
+        aspect-ratio: 1/1;
+        object-fit:cover ;
+        margin: 15px;
+       
+    }   
+}
+
+.item-bar .embla__slide{
+    transition: transform 0.3s ease;
 }
 
 .embla__controls {

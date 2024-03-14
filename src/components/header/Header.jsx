@@ -1,21 +1,16 @@
 import Navbar from '../navbar/Navbar';
 import { useFetch } from '../../api/useFetch';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
 import './header.scss'
-
-// import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
 
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({url}) => {
 
-    const{data} = useFetch('https://api.themoviedb.org/3/discover/movie?api_key=b419006516f8c011313942f7712b188b');
+    const{data} = useFetch(url);
 
     return (
     <div>
