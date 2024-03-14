@@ -15,9 +15,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 const Header = () => {
 
-    const{data} = useFetch('https://api.themoviedb.org/3/discover/movie?api_key=b419006516f8c011313942f7712b188b')
-    console.log("Header" , data)
-
+    const{data} = useFetch('https://api.themoviedb.org/3/discover/movie?api_key=b419006516f8c011313942f7712b188b');
 
     return (
     <div>

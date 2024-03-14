@@ -1,14 +1,15 @@
 import { useFetch } from "../../api/useFetch"
-import "./movie.scss"
+import "../embla-carousel/carousel.scss"
 import {PrevButton, NextButton, usePrevNextButtons} from '../embla-carousel/EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
 
-const Movie = () => {
+// eslint-disable-next-line react/prop-types
+const Widget = ({title, url, urlImg}) => {
   
-    const {data, loading, error} = useFetch('https://api.themoviedb.org/3/discover/movie?api_key=b419006516f8c011313942f7712b188b')
+    const {data, loading, error} = useFetch(url)
   
     console.log(data)
-    console.log("serie", data)
+    console.log(title, data)
     const [emblaRef, emblaApi] = useEmblaCarousel(data)
 
   
@@ -22,18 +23,18 @@ const Movie = () => {
   
     return (
     <div className="title">
-        <h1>Movies</h1>
+        <h1>{title}</h1>
         <section className="embla">
             {error && <li>Error: {error}</li>}
             {loading && <li>Loading...</li>}
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                {data && data.results && data.results.map((movie) => (
-                    <div className="embla__slide" key={movie.id}>
-                        <img className="movie-img" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" />
+                {data && data.results && data.results.map((item) => (
+                    <div className="embla__slide" key={item.id}>
+                        <img className="movie-img" src={`${urlImg}${item.poster_path}`} alt="" />
                         <div className="info">
-                            <h4 className="title"> {movie.title}</h4>
-                            <p className="title">{movie.release_date}</p>
+                            <h4 className="title"> {title ==="Movie Trending" ? item.title : item.name}</h4>
+                            <p className="title">{title ==="Movie Trending" ?item.release_date : item.first_air_date}</p>
                         </div>
                     </div>
                 ))}
@@ -50,4 +51,4 @@ const Movie = () => {
   )
 }
 
-export default Movie
+export default Widget
